@@ -1,0 +1,27 @@
+1. pont Művész úr neve: Nguyen Gia Bao
+
+2. pont URL cím:
+
+3. pont A téma, amit választottam azok többnyire a korai XX. századi gőzhajók, azon belül is a híres Olympic-osztály. 
+Azért ezt a témát választottam, mert nagy rajongásom van ezek a hajók iránt.
+Az oldalak tartalmai leginkább saját tudásból íródott, lehetséges tartalmi források a következők:
+
+https://en.wikipedia.org/wiki/Olympic-class_ocean_liner
+https://hu.wikipedia.org/wiki/Cunard_Line
+https://hu.wikipedia.org/wiki/RMS_Aquitania
+https://hu.wikipedia.org/wiki/RMS_Mauretania_(1906)
+https://hu.wikipedia.org/wiki/RMS_Titanic
+https://hu.wikipedia.org/wiki/RMS_Carpathia
+https://en.wikipedia.org/wiki/HMHS_Britannic
+
+
+
+4. pont  Minden oldalon található legalább egy darab A JS kód, és ez a 
+weboldal témájának változtató funkciója sötétről világosra és fordítva. A Cunard Line-ról 
+szóló oldal alján találunk egy újabb kódot, mely biztosítja a kérdésekre a gyors választ.
+
+5. pont Google Fonts - Oswald
+https://fonts.google.com/specimen/Oswald
+
+6. pont A RMS_Titanic oldalon lévő .bal és .jobb class-t copilot segítségével készült
+https://copilot.microsoft.com/onboarding

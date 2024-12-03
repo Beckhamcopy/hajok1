@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Honlap bemutatkozása">
+    <meta name="author" content="Nguyen Gia Bao">
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="jquery-validation-1.19.5/dist/jquery.validate.min.js"></script>
+    <title>Olympic-osztály hajói</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="icon" href="kepek1/favicon.ico" type="image/x-icon">
+    <script>
+    $(document).ready(function(){
+    $("#myform").validate({
+    rules: {
+     nev: "required",
+     csatlakozik: {
+      required: true,
+     },
+     email: {
+      required: true,
+      email: true
+     },
+     select: {
+      required: true,
+     },
+	  date: {
+      required: true,
+     },
+     checkbox: {
+      required: true,
+     },
+    },
+    messages: {
+     nev: " Írd be a felhasználóneved!",
+     csatlakozik: " válassz egyet!",
+     email: " Kérlek valós email címet adj meg!",
+     select: " Kötelező megadni!",
+	 date: " Válaszd a mai dátumodat!",
+     checkbox: " Válassz!"
+    },
+   });
+});
+
+    </script>
+    <style>
+        label.error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<header>Olympic-osztály hajói</header>
+
+<article class="theme">
+    <input type="button" value="Sötét mód" onclick="dark()">
+    <input type="button" value="Világos mód" onclick="light()">
+    </article>
+
+<div class="container">
+<aside id="dark" class="nav">
+<nav>
+    <ul>
+    <li><a class="active" href="#"> Főoldal </a></li>
+    <li><a href="Olympic.html"> RMS Olympic </a></li>
+    <li><a href="Titanic.html"> RMS Titanic </a></li>
+    <li><a href="Britannic.html"> HMHS Britannic</a></li>
+    <li><a href="Cunard.html"> Cunard Line hajók</a></li>
+    </ul>
+</nav>
+</aside>
+
+<article id="dark1">
+    <a href="Olympic.html"><img class="hajokep" src="kepek1/hajó1-min.jpg" alt="hajó"></a>
+    <h2>Bevezetés</h2>        
+    <p> Mindenki ismeri az RMS Titanic tragédiáját, de azt viszont kevesen tudják, hogy a testvér hajói mit tettek hozzá a történelemhez,
+        és ahhoz, hogy nélkülük akár máshogyan is alakulhattak volna a XX. századi események. A honlapon külön oldalonként tárom fel nektek ezeknek
+        a hajóknak a történeteit. 
+    </p> 
+    <figure>
+        <img class="pitypang" src= "kepek1/pitypang.jpg" alt= "pitypang">
+        <figcaption>A pitypant a nyugati front egy jelképe</figcaption>
+    </figure>   
+
+    
+    <h2>Olympic-osztály eredete</h2>
+    <p>A Olympic-osztály eredete visszavezethető a késő XIX. és korai XX. századra, amikor is az Az Egyesült Államokba való vándorlás volt
+         az úti cél több millió embernek abban reménységben, hogy ott új életet tudnak kezdenek. A kor legkorszerűbb módja volt az átjárásnak a hajózás volt. 
+         A White Star Line akkori rivális brit hajózási társasága a Cunard Line állt először azzal az elgondolkodással, hogy hogyan 
+         lehet a legkorszerűbben és legluxusabban átutazni Európa és Amerika között. Ezt követően megterveztek a kor egyik legnagyobb hajóit, nevezetesen az RMS Lusitania-t és RMS Mauretania-t.
+        A White Star Line ezt nem hagyhatta ezt szó nélkül, és a Cunard Line tevékenységeire reagálva megszervezték az Olympic-osztály megtervezését és megépítését.
+        A két társaság azon versenyzet egymással, hogy ki tudja a legjobban elcsábítani az utasokat a hajóikkal. Az az érdekesség a két társaság részéről, hogy mindkettőjük máshogyan 
+        próbálták felülmúlni a másikat tehát próbáltak egymáshoz képest egyediek lenni, amíg a Cunard Line hajói a sebességében voltak kimagaslók, addig a White Star Line hajói a luxusságukban.
+        Kettőjük harca az 1910-es évekbeli események hatására megváltozik. </p>
+</article>
+
+<aside id="dark2" class="adatok">
+    <h2 class="h2">Általános adatok</h2>
+    <h2>Tulajdonos cég:</h2>
+    <p>White Star Line</p>
+    <h2>Elődje:</h2>
+    <p>Athenic-osztály</p>
+    <h2>Gyártásuk helye:</h2>
+    <p>Harland and Wolff üzem, Belfast</p>
+    <h2>Gyártásuk ideje:</h2>
+    <p>1908-1914</p>
+    <h2>Szolgálati ideje:</h2>
+    <p>1911-1935</p>
+    <h2>Létszám:</h2>
+    <p>3 hajó</p>
+</aside>
+
+<article class="nagykerdoiv">
+        <h2>Segíts a honlap fejlesztésében</h2>
+        <p>Annak érdekében, hogy jobb felhasználói élményt nyújtjunk,
+             ahhoz szükségünk lenne a visszajelzésetekre.</p>
+             <form method="post" id="myform" action="https://rf.uni-corvinus.hu/webfejlesztes/receive.php">
+                <table class="kerdoiv">
+                    <tr>
+                        <td class="felsocim" colspan="2">Az oldalal kapcsolatos kérdőív</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><label for="nev">Hogyan hívjunk téged? </label><br>
+                                <input type="text" id="nev" name="nev">
+                            </p><br>
+                            <p><label for="radio">Szeretnél a hírlevelünkhőz csatlakozni? </label><br>
+                                
+                                <p>igen<input id="radio" type="radio" name="csatlakozik" value="igen"><br></p>
+                                
+                                <p>nem<input id="radio" type="radio" name="csatlakozik" value="nem"><br></p>
+                            </p>
+                            <p><label for="email">Add meg az e-mail címedet a hírlevelekhez. </label><br>
+                                <input id="email" type="email" value="@">
+
+                            </p>
+                            <p><label for="select">Milyen korosztályba tartozol? </label><br>
+                            <select size="1" name="kor" >
+                                <option  name="select" id="select" value="* - 18">18 év vagy annál kevesebb</option>
+                                <option name="select" id="select" value="19-25">19-25 év között</option>
+                                <option name="select" id="select" value="26-35">26-35 év között</option>
+                                <option name="select" id="select" value="36 - *">36 év vagy annál több</option>
+                            </select><br>
+                            </p>
+                            <p><label for="date">Melyik nap adod le a kérdőívet? </label><br>
+                                <input id="date" type="date" name="date">
+                            <br></p>
+
+
+                        </td>
+                        <td class="kerdoiv">
+                            <p><label for="checkbox">Milyen más témákkal bővüljön az oldal? </label><br>
+                            <input id="checkbox" type="checkbox" name="téma1" value="1" >White Star Line története<br>
+                            <input id="checkbox" type="checkbox" name="téma2" value="2">Más White Star Line hajók<br>
+                            <input id="checkbox" type="checkbox" name="téma3" value="3">Cunard Line története<br>
+                            <input id="checkbox" type="checkbox" name="téma4" value="4">Más Cunard Line hajók<br>
+                            <input id="checkbox" type="checkbox" name="téma5" value="5">Más nemzetek gőzhajói a korszakban<br>
+                            <input id="checkbox" type="checkbox" name="téma6" value="6">A Nagy háború hajói<br>
+                            <input id="checkbox" type="checkbox" name="téma7" value="7">A II. világháború hajói<br>
+                            <input id="checkbox" type="checkbox" name="téma8" value="8">A gőzhajók kialakulása<br>
+                            <input id="checkbox" type="checkbox" name="téma9" value="9">Tengeralattjárók<br>
+                            <input id="checkbox" type="checkbox" name="téma10" value="10">Vitorlás hajók<br>
+                            </p><br>
+                            <p>Egyéb hozzászólások <br>
+                                <textarea name="egyéb" rows="10" cols="30" ></textarea>
+                            </p>
+                        </td>
+                        </tr>
+                    <tr>
+                        <td class="alsocim" colspan="2">
+                            <input type="submit" value="Elküldés">
+                            <input type="reset" value="Alaphelyzet"><br>
+                        </td>
+                    </tr>
+                </table>
+                <script src="script.js"></script>
+             </form>       
+</article>
+</div>
+<footer>Tanulmányi célból készült weboldal</footer>    
+</body>
+</html>

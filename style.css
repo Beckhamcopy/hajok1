@@ -1,0 +1,281 @@
+
+/*általános*/
+
+* {
+    box-sizing: border-box;
+}
+
+.container>* {
+    margin: 1%;
+    height: fit-content;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+html {
+    padding: 0px;
+    margin: 0px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+body {
+    background-image: url(kepek1/ocean2.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0px;
+    font-family: "Oswald", sans-serif;
+}
+
+header {
+    padding: 25px;
+    margin: 0px;
+    background-color: rgb(54, 52, 52) ;
+    text-align: center;
+    font-size: 1.5em;
+    color: rgb(255, 255, 255);
+}
+
+.felsocim {
+    text-align: center;
+    font-weight: bold;
+}
+
+
+ul {list-style-type: none;
+    margin: 0;
+    padding: 0;
+    }
+
+.nav {
+    background-color:  #454545;
+
+}
+
+
+nav li a {
+    display: block;
+    padding: 12px;
+    margin-bottom: 12px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(54, 52, 52);
+    border-radius: 15px;
+    text-align: center;
+    text-decoration: none;
+}
+    
+nav ul li a.active {
+    background-color: rgb(168, 162, 162);
+}
+    
+nav li a:hover {
+    background-color: white;
+    color: black;
+}
+
+.hajokep {
+    border: 3px solid black;
+    width: 200px;
+    float: right;
+    margin: 8% 2%;
+}
+
+
+.pitypang {
+    border: 3px solid black;
+    width: 80%;
+    margin: 5% 10%
+}
+
+
+figcaption {
+    text-align: center;
+    margin: 1%;
+    font-style:italic ;
+}
+
+
+article {
+    background-color: #454545;
+    padding: 0px 8px;
+    color: White;
+    text-align: justify;
+    border-radius: 15px;
+    flex: 1 1 100%;
+    font-size: 24px;
+}
+
+.h2 {text-align: center;
+    color: rgb(255, 157, 0);
+}
+
+aside {
+    background-color: #454545;
+    padding: 0px 8px;
+    color: azure;
+    text-align: justify;
+    border-radius: 15px;
+    flex: 1 1 100%;
+    border-width: 30px;
+}
+
+footer {
+    padding: 25px;
+    margin: 0%;
+    background-color:  rgb(54, 52, 52);
+    text-align: center;
+    font-size: 1.5em;
+    color: rgb(255, 255, 255);
+    width: 100%;
+}
+
+.alsocim {
+    text-align: center;
+
+}
+
+/*Főoldal beállításai*/
+
+table {
+    margin: 0% auto 5% auto;
+}
+
+td {
+    vertical-align: top;
+}
+
+.nagykerdoiv {
+    align-self: flex-end;
+    background-color: rgb(42, 105, 66);
+    justify-self: center;
+    width: 48%;
+}
+
+.kerdoiv {
+    text-align: left;
+    vertical-align: middle;
+}
+
+
+/*Olympic beállításai*/
+
+
+
+
+/*Titanic beállításai*/
+
+.jobb { position: fixed; /* forrás: copilot*/
+    right: 0;
+    top: 20%;
+    width: 23%;
+    height: 70%;
+    background-color: #454545; 
+    overflow-y: scroll; /* görgetés engedélyezése, ha szükséges */ 
+    font-size: 75%;
+    }
+
+.bal { position: fixed; /* forrás: copilot*/
+    left: 0;
+    top: 20%;
+    width: 23%; 
+    background-color: #454545; 
+    overflow: auto; 
+    }
+
+
+.titanicarticle {
+    background-color: #454545;
+    padding: 0px 8px;
+    color: White;
+    text-align: center;
+    border-radius: 15px;
+    flex: 1 1 100%;
+    width: 48%;
+    justify-content: center;
+    align-self: flex-start;
+    margin-left: 26%;
+    margin-right: 26%;
+}
+
+/*Britannic beállításai*/
+
+
+/*Cunard Line beállításai*/
+.theme {
+    text-align: right;
+}
+.Cunard {
+    margin-left: auto;
+}
+.adatok4 {
+    font-size: 16px;
+}
+
+
+
+@media all and (min-width: 600px) {
+    /*tablet*/
+    
+    nav {
+        flex-basis: 23%;
+    }
+    li {
+        font-size: 24px;
+    }
+    article {
+        flex-basis: 73%;      
+    }
+    body {
+        font-size: 24px; 
+    }
+    .nagykerdoiv {
+        flex-basis: 100%;
+    }
+    .kerdoiv {
+        flex-basis: 100%;
+        vertical-align: middle;
+    }
+    aside {
+        flex-basis: 23%;
+    }
+    .titanicarticle {
+        flex-basis: 100%;
+    }
+
+
+
+}
+
+
+@media all and (min-width: 768px) {
+    /*számítógép*/
+    
+    nav {
+        flex-basis: 23%;
+    }
+    article {
+        flex-basis: 48%;
+        color: #ffffff;
+    }
+    .nagykerdoiv {
+        margin-left: 23%;
+        margin-right: 23%;
+    }
+    aside {
+        flex-basis: 23%;
+    }
+    .bal {
+        flex-basis: 23%;
+    }
+    .jobb {
+        flex-basis: 23%;
+    }
+    .titanicarticle {
+        flex-basis: 48%;
+    }
+
+}
