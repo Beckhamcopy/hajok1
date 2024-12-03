@@ -1,373 +1,188 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="hu">
 <head>
-  <title>Slick Playground</title>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" type="text/css" href="./slick/slick.css">
-  <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css">
-  <style type="text/css">
-    html, body {
-      margin: 0;
-      padding: 0;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Honlap bemutatkozása">
+    <meta name="author" content="Nguyen Gia Bao">
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="jquery-validation-1.19.5/dist/jquery.validate.min.js"></script>
 
-    * {
-      box-sizing: border-box;
-    }
+    <title>Olympic-osztály hajói</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="icon" href="kepek1/favicon.ico" type="image/x-icon">
+    <script>
+    $(document).ready(function(){
+    $("#myform").validate({
+    rules: {
+     nev: "required",
+     csatlakozik: {
+      required: true,
+     },
+     email: {
+      required: true,
+      email: true
+     },
+     select: {
+      required: true,
+     },
+	  date: {
+      required: true,
+     },
+     checkbox: {
+      required: true,
+     },
+    },
+    messages: {
+     nev: " Írd be a felhasználóneved!",
+     csatlakozik: " válassz egyet!",
+     email: " Kérlek valós email címet adj meg!",
+     select: " Kötelező megadni!",
+	 date: " Válaszd a mai dátumodat!",
+     checkbox: " Válassz!"
+    },
+   });
+});
 
-    .slider {
-        width: 50%;
-        margin: 100px auto;
-    }
-
-    .slick-slide {
-      margin: 0px 20px;
-    }
-
-    .slick-slide img {
-      width: 100%;
-    }
-
-    .slick-prev:before,
-    .slick-next:before {
-      color: black;
-    }
-
-
-    .slick-slide {
-      transition: all ease-in-out .3s;
-      opacity: .2;
-    }
-    
-    .slick-active {
-      opacity: .5;
-    }
-
-    .slick-current {
-      opacity: 1;
-    }
-  </style>
+    </script>
+    <style>
+        label.error {
+            color: red;
+        }
+    </style>
 </head>
 <body>
+<header>Olympic-osztály hajói</header>
 
-  <section class="vertical-center-4 slider">
-    <div>
-      <img src="http://placehold.it/350x100?text=1">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=2">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=3">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=4">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=5">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=6">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=7">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=8">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=9">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=10">
-    </div>
-  </section>
+<article class="theme">
+    <input type="button" value="Sötét mód" onclick="dark()">
+    <input type="button" value="Világos mód" onclick="light()">
+    </article>
 
-  <section class="vertical-center-3 slider">
-    <div>
-      <img src="http://placehold.it/350x100?text=1">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=2">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=3">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=4">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=5">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=6">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=7">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=8">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=9">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=10">
-    </div>
-  </section>
+<div class="container">
+<aside id="dark" class="nav">
+<nav>
+    <ul>
+    <li><a class="active" href="#"> Főoldal </a></li>
+    <li><a href="olympic.html"> RMS Olympic </a></li>
+    <li><a href="titanic.html"> RMS Titanic </a></li>
+    <li><a href="britannic.html"> HMHS Britannic</a></li>
+    <li><a href="cunard.html"> Cunard Line hajók</a></li>
+    </ul>
+</nav>
+</aside>
 
-  <section class="vertical-center-2 slider">
-    <div>
-      <img src="http://placehold.it/350x100?text=1">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=2">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=3">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=4">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=5">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=6">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=7">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=8">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=9">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=10">
-    </div>
-  </section>
+<article id="dark1">
+    <a href="Olympic.html"><img class="hajokep" src="kepek1/hajó1-min.jpg" alt="hajó"></a>
+    <h2>Bevezetés</h2>        
+    <p> Mindenki ismeri az RMS Titanic tragédiáját, de azt viszont kevesen tudják, hogy a testvér hajói mit tettek hozzá a történelemhez,
+        és ahhoz, hogy nélkülük akár máshogyan is alakulhattak volna a XX. századi események. A honlapon külön oldalonként tárom fel nektek ezeknek
+        a hajóknak a történeteit. 
+    </p> 
+    <figure>
+        <img class="pitypang" src= "kepek1/pitypang.jpg" alt= "pitypang">
+        <figcaption>A pitypant a nyugati front egy jelképe</figcaption>
+    </figure>   
 
-  <section class="vertical-center slider">
-    <div>
-      <img src="http://placehold.it/350x100?text=1">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=2">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=3">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=4">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=5">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=6">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=7">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=8">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=9">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=10">
-    </div>
-  </section>
+    
+    <h2>Olympic-osztály eredete</h2>
+    <p>A Olympic-osztály eredete visszavezethető a késő XIX. és korai XX. századra, amikor is az Az Egyesült Államokba való vándorlás volt
+         az úti cél több millió embernek abban reménységben, hogy ott új életet tudnak kezdenek. A kor legkorszerűbb módja volt az átjárásnak a hajózás volt. 
+         A White Star Line akkori rivális brit hajózási társasága a Cunard Line állt először azzal az elgondolkodással, hogy hogyan 
+         lehet a legkorszerűbben és legluxusabban átutazni Európa és Amerika között. Ezt követően megterveztek a kor egyik legnagyobb hajóit, nevezetesen az RMS Lusitania-t és RMS Mauretania-t.
+        A White Star Line ezt nem hagyhatta ezt szó nélkül, és a Cunard Line tevékenységeire reagálva megszervezték az Olympic-osztály megtervezését és megépítését.
+        A két társaság azon versenyzet egymással, hogy ki tudja a legjobban elcsábítani az utasokat a hajóikkal. Az az érdekesség a két társaság részéről, hogy mindkettőjük máshogyan 
+        próbálták felülmúlni a másikat tehát próbáltak egymáshoz képest egyediek lenni, amíg a Cunard Line hajói a sebességében voltak kimagaslók, addig a White Star Line hajói a luxusságukban.
+        Kettőjük harca az 1910-es évekbeli események hatására megváltozik. </p>
+</article>
 
-  <section class="vertical slider">
-    <div>
-      <img src="http://placehold.it/350x100?text=1">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=2">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=3">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=4">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=5">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=6">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=7">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=8">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=9">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=10">
-    </div>
-  </section>
-  <section class="regular slider">
-    <div>
-      <img src="http://placehold.it/350x300?text=1">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x300?text=2">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x300?text=3">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x300?text=4">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x300?text=5">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x300?text=6">
-    </div>
-  </section>
+<aside id="dark2" class="adatok">
+    <h2 class="h2">Általános adatok</h2>
+    <h2>Tulajdonos cég:</h2>
+    <p>White Star Line</p>
+    <h2>Elődje:</h2>
+    <p>Athenic-osztály</p>
+    <h2>Gyártásuk helye:</h2>
+    <p>Harland and Wolff üzem, Belfast</p>
+    <h2>Gyártásuk ideje:</h2>
+    <p>1908-1914</p>
+    <h2>Szolgálati ideje:</h2>
+    <p>1911-1935</p>
+    <h2>Létszám:</h2>
+    <p>3 hajó</p>
+</aside>
 
-  <section class="center slider">
-    <div>
-      <img src="http://placehold.it/350x300?text=1">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x300?text=2">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x300?text=3">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x300?text=4">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x300?text=5">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x300?text=6">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x300?text=7">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x300?text=8">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x300?text=9">
-    </div>
-  </section>
+<article class="nagykerdoiv">
+        <h2>Segíts a honlap fejlesztésében</h2>
+        <p>Annak érdekében, hogy jobb felhasználói élményt nyújtjunk,
+             ahhoz szükségünk lenne a visszajelzésetekre.</p>
+             <form method="post" id="myform" action="https://rf.uni-corvinus.hu/webfejlesztes/receive.php">
+                <table class="kerdoiv">
+                    <tr>
+                        <td class="felsocim" colspan="2">Az oldalal kapcsolatos kérdőív</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><label for="nev">Hogyan hívjunk téged? </label><br>
+                                <input type="text" id="nev" name="nev">
+                            </p><br>
+                            <label for="radio"><p>Szeretnél a hírlevelünkhőz csatlakozni?</label><br>
+                                
+                                <label><p>igen<input id="radio" type="radio" name="csatlakozik" value="igen"></label><br></p>
+                                
+                                <label><p>nem<input id="radio" type="radio" name="csatlakozik" value="nem"></label><br></p>
+                            </p>
+                            <p><label for="email">Add meg az e-mail címedet a hírlevelekhez. </label><br>
+                                <input id="email" type="email" value="@">
 
-  <section class="variable slider">
-    <div>
-      <img src="http://placehold.it/350x300?text=1">
-    </div>
-    <div>
-      <img src="http://placehold.it/200x300?text=2">
-    </div>
-    <div>
-      <img src="http://placehold.it/100x300?text=3">
-    </div>
-    <div>
-      <img src="http://placehold.it/200x300?text=4">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x300?text=5">
-    </div>
-    <div>
-      <img src="http://placehold.it/300x300?text=6">
-    </div>
-  </section>
+                            </p>
+                            <p><label for="select">Milyen korosztályba tartozol? </label><br>
+                            <select size="1" name="kor" >
+                                <option name="select" id="select" value="* - 18">18 év vagy annál kevesebb</option>
+                                <option name="select" id="select" value="19-25">19-25 év között</option>
+                                <option name="select" id="select" value="26-35">26-35 év között</option>
+                                <option name="select" id="select" value="36 - *">36 év vagy annál több</option>
+                            </select><br>
+                            </p>
+                            <p><label for="date">Melyik nap adod le a kérdőívet? </label><br>
+                                <input id="date" type="date" name="date">
+                            <br></p>
 
-  <section class="lazy slider" data-sizes="50vw">
-    <div>
-      <img data-lazy="http://placehold.it/350x300?text=1-350w" data-srcset="http://placehold.it/650x300?text=1-650w 650w, http://placehold.it/960x300?text=1-960w 960w" data-sizes="100vw">
-    </div>
-    <div>
-      <img data-lazy="http://placehold.it/350x300?text=2-350w" data-srcset="http://placehold.it/650x300?text=2-650w 650w, http://placehold.it/960x300?text=2-960w 960w" data-sizes="100vw">
-    </div>
-    <div>
-      <img data-lazy="http://placehold.it/350x300?text=3-350w"  data-srcset="http://placehold.it/650x300?text=3-650w 650w, http://placehold.it/960x300?text=3-960w 960w" data-sizes="100vw">
-    </div>
-    <div>
-      <img data-lazy="http://placehold.it/350x300?text=4-350w"  data-srcset="http://placehold.it/650x300?text=4-650w 650w, http://placehold.it/960x300?text=4-960w 960w" data-sizes="100vw">
-    </div>
-    <div>
-      <img data-lazy="http://placehold.it/350x300?text=5-350w"  data-srcset="http://placehold.it/650x300?text=5-650w 650w, http://placehold.it/960x300?text=5-960w 960w" data-sizes="100vw">
-    </div>
-    <div>
-      <!-- this slide should inherit the sizes attr from the parent slider -->
-      <img data-lazy="http://placehold.it/350x300?text=6-350w"  data-srcset="http://placehold.it/650x300?text=6-650w 650w, http://placehold.it/960x300?text=6-960w 960w">
-    </div>
-  </section>
 
-  <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
-  <script src="./slick/slick.js" type="text/javascript" charset="utf-8"></script>
-  <script type="text/javascript">
-    $(document).on('ready', function() {
-      $(".vertical-center-4").slick({
-        dots: true,
-        vertical: true,
-        centerMode: true,
-        slidesToShow: 4,
-        slidesToScroll: 2
-      });
-      $(".vertical-center-3").slick({
-        dots: true,
-        vertical: true,
-        centerMode: true,
-        slidesToShow: 3,
-        slidesToScroll: 3
-      });
-      $(".vertical-center-2").slick({
-        dots: true,
-        vertical: true,
-        centerMode: true,
-        slidesToShow: 2,
-        slidesToScroll: 2
-      });
-      $(".vertical-center").slick({
-        dots: true,
-        vertical: true,
-        centerMode: true,
-      });
-      $(".vertical").slick({
-        dots: true,
-        vertical: true,
-        slidesToShow: 3,
-        slidesToScroll: 3
-      });
-      $(".regular").slick({
-        dots: true,
-        infinite: true,
-        slidesToShow: 3,
-        slidesToScroll: 3
-      });
-      $(".center").slick({
-        dots: true,
-        infinite: true,
-        centerMode: true,
-        slidesToShow: 5,
-        slidesToScroll: 3
-      });
-      $(".variable").slick({
-        dots: true,
-        infinite: true,
-        variableWidth: true
-      });
-      $(".lazy").slick({
-        lazyLoad: 'ondemand', // ondemand progressive anticipated
-        infinite: true
-      });
-    });
-</script>
-
+                        </td>
+                        <td class="kerdoiv">
+                            <p>Milyen más témákkal bővüljön az oldal?<br>
+                            <label><input id="checkbox" type="checkbox" name="téma1" value="1" >White Star Line története </label><br>
+                            <label><input id="checkbox" type="checkbox" name="téma2" value="2">Más White Star Line hajók </label><br>
+                            <label><input id="checkbox" type="checkbox" name="téma3" value="3">Cunard Line története </label><br>
+                            <label><input id="checkbox" type="checkbox" name="téma4" value="4">Más Cunard Line hajók </label><br>
+                            <label><input id="checkbox" type="checkbox" name="téma5" value="5">Más nemzetek gőzhajói a korszakban </label><br>
+                            <label><input id="checkbox" type="checkbox" name="téma6" value="6">A Nagy háború hajói </label><br>
+                            <label><input id="checkbox" type="checkbox" name="téma7" value="7">A II. világháború hajói </label><br>
+                            <label><input id="checkbox" type="checkbox" name="téma8" value="8">A gőzhajók kialakulása </label><br>
+                            <label><input id="checkbox" type="checkbox" name="téma9" value="9">Tengeralattjárók </label><br>
+                            <label><input id="checkbox" type="checkbox" name="téma10" value="10">Vitorlás hajók </label><br>
+                            </p><br>
+                            <p>Egyéb hozzászólások <br>
+                                <textarea name="egyéb" rows="10" cols="30" ></textarea>
+                            </p>
+                        </td>
+                        </tr>
+                    <tr>
+                        <td class="alsocim" colspan="2">
+                            <input type="submit" value="Elküldés">
+                            <input type="reset" value="Alaphelyzet"><br>
+                        </td>
+                    </tr>
+                </table>
+                <script src="script.js"></script>
+             </form>       
+</article>
+</div>
+<footer>Tanulmányi célból készült weboldal</footer>    
 </body>
 </html>

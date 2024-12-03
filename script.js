@@ -1,11 +1,4 @@
-/*function felugrik(){
-    var nevertek = document.getElementById("nev").value;
 
-    if ((nevertek =="")){
-        alert("Nem adtál nevet a kérdőívhez!")
-    }
-}
-*/
 
 
 function dark(){
